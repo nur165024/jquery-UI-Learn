@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Jquery UI</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/themes/sunny/jquery-ui.css">
+  </head>
+  <body>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    Amount:<span id="state"></span>
+                    <br>
+                    <br>
+                    <div id="slider"></div>
+
+                    <!-- minimum and maximum amount -->
+
+                     <form class="mt-4">
+                         <div class="form-group">
+                            <label>Minimum Amount</label>
+                            <input class="form-control" type="text" id="minimum">
+                         </div>
+                         <div class="form-group">
+                            <label>Maximum Amount</label>
+                            <input class="form-control" type="text" id="maximum">
+                         </div>
+                     </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- fontawesome link -->
+    <script src="https://kit.fontawesome.com/ec5a73e974.js"></script>
+
+    <script>
+        $(function(){
+            var getoutput = $("#state");
+            var getslider = $("#slider");
+
+            getslider.slider({
+                range : true,
+                min : 10,
+                max : 100,
+                values : [20, 40],
+                slide : function(event, ui){
+                    getoutput.html(ui.values[0]+'-'+ui.values[1] +" Tk");
+                    $("#minimum").val(ui.values[0]);
+                    $("#maximum").val(ui.values[1]);
+                },
+            });
+            getoutput.html(getslider.slider('values',0)+" - "+getslider.slider('values',1)+" Tk");
+            $("#minimum").val(getslider.slider('values',0));
+            $("#maximum").val(getslider.slider('values',1));
+        });
+    </script>
+
+</body>
+</html>    
