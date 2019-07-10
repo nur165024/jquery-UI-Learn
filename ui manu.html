@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Jquery UI</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/themes/sunny/jquery-ui.css">
+  </head>
+  <body>
+      
+    <style>
+        .manu_ui {
+            width: 200px;
+        }
+
+        .ui-menu {
+            width: 200px;
+        }
+    </style>
+
+    <section>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12" title="Jquery Dialog Message">
+                    <ul id="manu">
+                        <li>web Design
+                            <ul>
+                                <li>html</li>
+                                <li>css</li>
+                                <li>bootstrap</li>
+                            </ul>
+                        </li>
+
+                        <li>java
+                            <ul>
+                                <li>FSP</li>
+                                <li>JSP
+                                    <ul>
+                                        <li>jss</li>
+                                        <li>cds</li>
+                                        <li>cdn</li>
+                                    </ul>
+                                </li>
+                                <li>JPSD</li>
+                            </ul>
+                        </li>
+
+                        <li>JavaScript
+                            <ul>
+                                <li>node js
+                                    <ul>
+                                        <li>type script</li>
+                                        <li>type script 1</li>
+                                        <li>type script 2</li>
+                                    </ul>
+                                </li>
+                                <li>vue js</li>
+                                <li>react js</li>
+                            </ul>
+                        </li>
+
+                        <li>seo
+                            <ul>
+                                <li>Keyword</li>
+                                <li>on page</li>
+                                <li>off page
+                                    <ul>
+                                        <li>backlink</li>
+                                        <li>backlink 1</li>
+                                        <li>backlink 2</li>
+                                        <li>backlink 3</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>ul ux design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- fontawesome link -->
+    <script src="https://kit.fontawesome.com/ec5a73e974.js"></script>
+    
+    <script>
+        $(function(){
+            $("#manu").menu();
+        });
+    </script>
+  </body>
+</html>
